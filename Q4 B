@@ -1,8 +1,9 @@
 #include<stdio.h>
 int main()
 {
-  
+  int rerun=0;
   char ch;
+  start :
   printf("PLS SELECT THE CHOICE CODE FROM LIST BELOW\n");
   printf("CODE  |  ACTION\n");
   printf("------|----------------------------------------------\n");
@@ -201,4 +202,14 @@ case 'C':
   }
 return 0;
 }
+printf("\nIf you want to rerun the code enter 1 or else any number to exit the program :- ");
+  scanf("%d",&rerun);
+  if(rerun==1)
+  {
+    goto start;
+  }
+  else
+  {
+    printf("THANSK FOR USING");
+  }
 }
