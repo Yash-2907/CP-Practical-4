@@ -1,0 +1,86 @@
+#include<stdio.h>
+int main()
+{
+  
+  int n,rerun=0;
+  start :
+  printf("PLS SELECT THE CHOICE CODE FROM LIST BELOW\n");
+  printf("CODE  |  ACTION\n");
+  printf("------|----------------------------------------------\n");
+  printf("1     | FIND THE LARGEST DIGIT AMOUNG THE NUMBER\n");
+  printf("2     | CHECK FOR ARMSTRONG NUMBER\n");
+  printf("3     | CONVERT UPPER CASE TO LOWER CASE AND VICE VERSA\n");
+  scanf("%d",&n);
+  switch (n)
+  {
+  case 1:
+  {  
+    int num,d,l,rem,temp=0;
+    printf("pls enter the number :- ");
+    scanf("%d",&num);
+    while(num>0)
+    {
+      rem=num%10;
+      if(rem>temp)
+      {
+        temp=rem;
+      }
+      num=num/10;
+    }
+    printf("largest digit=%d",temp);
+    break;
+  }
+  case 2:
+  {
+    int num,p=0,temp,rem;
+    printf("pls enter the number :- ");
+    scanf("%d",&num);
+    temp=num;
+    while (num>0)
+    {
+      rem=num%10;
+      p=p+(rem*rem*rem);
+      num=num/10;
+    }
+    if(temp==p)
+    {
+      printf("IT IS ARMSTRONG NUMBER");
+    }
+    else
+    {
+      printf("NOT A ARMSTRONG NUMBER");
+    }
+    break;
+  }
+  case 3:
+  {
+    char ch,temp;
+    printf("PLS ENTER THE CHARACTER :- ");
+    scanf(" %c",&ch);
+    if((ch>=65)&&(ch<=90))
+    {
+      temp=ch+32;
+      printf("LOWER CASE IS :- %c",temp);
+    }
+    else{
+      temp=ch-32;
+      printf("UPPER CASE IS :-%c",temp);
+    }
+    break;
+  }
+  default:
+    printf("ERROR");
+    break;
+  }
+  printf("\nIf you want to rerun the code enter 1 or else any number to exit the program :- ");
+  scanf("%d",&rerun);
+  if(rerun==1)
+  {
+    goto start;
+  }
+  else
+  {
+    printf("THANSK FOR USING");
+  }
+  return 0;
+}
