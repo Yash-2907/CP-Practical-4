@@ -1,0 +1,204 @@
+#include<stdio.h>
+int main()
+{
+  
+  char ch;
+  printf("PLS SELECT THE CHOICE CODE FROM LIST BELOW\n");
+  printf("CODE  |  ACTION\n");
+  printf("------|----------------------------------------------\n");
+  printf("A     | +,-,*,/,%\n");
+  printf("B     | BITWISE AND , OR , XOR\n");
+  printf("C     | <,>,==,!=\n");
+  printf("D     | CHECK EVEN OR ODD\n");
+  scanf(" %c",&ch);
+  switch (ch)
+  {
+  case 'A':
+    {
+      int n;
+      printf("PLS SELECT THE CHOICE CODE FROM LIST BELOW\n");
+      printf("CODE  |  ACTION\n");
+      printf("------|----------------------------------------------\n");
+      printf("1     | +\n");
+      printf("2     | -\n");
+      printf("3     | *\n");
+      printf("4     | /\n");
+      printf("5     | %\n");
+      scanf("%d",&n);
+      switch (n)
+      {
+      case 1:
+      {
+        int n1,n2;
+        printf("ENTER TWO NUMBERS :- ");
+        scanf("%d%d",&n1,&n2);
+        printf("ANS=%d",n1+n2);
+        break;
+      }
+      case 2:
+      {
+        int n1,n2;
+        printf("ENTER TWO NUMBERS :- ");
+        scanf("%d%d",&n1,&n2);
+        printf("ANS=%d",n1-n2);
+        break;
+      }
+      case 3:
+      {
+        int n1,n2;
+        printf("ENTER TWO NUMBERS :- ");
+        scanf("%d%d",&n1,&n2);
+        printf("ANS=%d",n1*n2);
+        break;
+      }
+      case 4:
+      {
+        float n1,n2;
+        printf("ENTER TWO NUMBERS :- ");
+        scanf("%d%d",&n1,&n2);
+        printf("ANS=%d",n1/n2);
+        break;
+      }
+      case 5:
+      {
+        int n1,n2;
+        printf("ENTER TWO NUMBERS :- ");
+        scanf("%d%d",&n1,&n2);
+        printf("ANS=%d",n1%n2);
+        break;
+      }
+      default:
+        break;
+      }
+    break;
+    }
+  case 'B':
+  {
+    int n;
+      printf("PLS SELECT THE CHOICE CODE FROM LIST BELOW\n");
+      printf("CODE  |  ACTION\n");
+      printf("------|----------------------------------------------\n");
+      printf("1     | AND\n");
+      printf("2     | OR\n");
+      printf("3     | XOR\n");
+      scanf("%d",&n);
+      switch (n)
+      {
+        case 1:
+      {
+        int n1,n2;
+        printf("ENTER TWO NUMBERS :- ");
+        scanf("%d%d",&n1,&n2);
+        printf("ANS=%d",n1&n2);
+        break;
+      }
+      case 2:
+      {
+        int n1,n2;
+        printf("ENTER TWO NUMBERS :- ");
+        scanf("%d%d",&n1,&n2);
+        printf("ANS=%d",n1|n2);
+        break;
+      }
+      case 3:
+      {
+        int n1,n2;
+        printf("ENTER TWO NUMBERS :- ");
+        scanf("%d%d",&n1,&n2);
+        printf("ANS=%d",n1^n2);
+        break;
+      }
+      default :
+      break;
+      }
+  }
+case 'C':
+{
+  int n;
+      printf("PLS SELECT THE CHOICE CODE FROM LIST BELOW\n");
+      printf("CODE  |  ACTION\n");
+      printf("------|----------------------------------------------\n");
+      printf("1     | <\n");
+      printf("2     | >\n");
+      printf("3     | ==\n");
+      printf("4     | !=\n");
+      scanf("%d",&n);
+      switch (n)
+      {
+      case 1:
+      {
+        int n1,n2;
+        printf("ENTER TWO NUMBERS :- ");
+        scanf("%d%d",&n1,&n2);
+        if(n1>n2)
+        {
+          printf("%d is greater",n1);
+        }
+        else{
+          printf("%d is greater",n2);
+        }
+        break;
+      }
+      case 2:
+      {
+        int n1,n2;
+        printf("ENTER TWO NUMBERS :- ");
+        scanf("%d%d",&n1,&n2);
+        if(n1>n2)
+        {
+          printf("%d is greater",n1);
+        }
+        else{
+          printf("%d is greater",n2);
+        }
+        break;
+      }
+      case 3:
+      {
+        int n1,n2;
+        printf("ENTER TWO NUMBERS :- ");
+        scanf("%d%d",&n1,&n2);
+        if(n1==n2)
+        {
+          printf("ENTERED NUMBERS ARE EQUAL");
+        }
+        else{
+          printf("ENTERED NUMBER ARE NOT EQUAL");
+        }
+        break;
+      }
+      case 4:
+      {
+        float n1,n2;
+        printf("ENTER TWO NUMBERS :- ");
+        scanf("%d%d",&n1,&n2);
+         if(n1==n2)
+        {
+          printf("ENTERED NUMBERS ARE EQUAL");
+        }
+        else{
+          printf("ENTERED NUMBER ARE NOT EQUAL");
+        }
+        break;
+      } 
+      default:
+        break;
+
+ }
+
+  
+
+  
+    break;
+  }
+  case 'D':
+  {
+        int n;
+        printf("PLS ENTER A NUMBER :- ");
+        scanf("%d",&n);
+        (n%2==0)?(printf("NUMBER IS EVEN")):(printf("NUMBER IS ODD"));
+        
+  }
+return 0;
+}
+}
