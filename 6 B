@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+float area(float);
+float volume(float);
+int main(){
+    float r,ans1,ans2;
+    printf("pls enter the radius of the sphere :-");
+    scanf("%f",&r);
+    ans1=area(r);
+    ans2=volume(r);
+    printf("area of sphers is :-%f\n",ans1);
+    printf("volume of sphere is :-%f\n",ans2);
+    return 0;
+}
+float area (float x)
+{
+  float ans;
+  ans=4*3.14*x*x;
+  return ans;
+}
+float volume (float x)
+{
+    float ans;
+    ans=(4.0/3.0)*3.14*x*x*x;
+    return ans;
+}
