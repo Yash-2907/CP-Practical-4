@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+void pal(char []);
+int main()
+{
+    char s[100];
+    printf("pls enter the string :-");
+    scanf("%s",s);
+    pal(s);
+    return 0;
+}
+void pal(char s[])
+{
+    int len=strlen(s),i,count=0;
+    for(int i=0;i<len;i++)
+    {
+        if(s[i]==s[len-i])
+        {
+            count=0;
+        }
+        else{
+            count=1;
+        }
+    }
+    if(count==1)
+    {
+        printf("not palindrome");
+    }
+    else{
+        printf("it is palindrome");
+    }
+}
