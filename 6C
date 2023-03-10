@@ -1,0 +1,111 @@
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+void rev(int);
+int prod(int,int);
+void fib(int);
+int x,y;
+int main()
+{
+    int n;
+    printf("SELECT THE CODE BELOW TO PERFORM THE ACTION");
+    printf("CODE       ACTION\n");
+    printf("----------------------------------------\n");
+    printf("1          REVERSE OF NUMBER\n");
+    printf("2          PRODUCT OF TWO NUMBER USING RECURSIION\n");
+    printf("3          Nth term of fibonacci series\n");
+    scanf("%d",&n);
+    switch(n)
+    {
+        case 1:
+        {
+        int x;
+        printf("PLS ENTER THE NUMBER :-");
+        scanf("%d",&x);
+        rev(x);  
+        break;
+        }
+        case 2:
+        {
+         printf("PLS ENTER TWO NUMBERS :-");
+         scanf("%d%d",&x,&y);
+         int ans=prod(x,y);
+         printf("%d",ans);
+         break;
+        }
+        case 3:
+        {
+          int x;
+          printf("PLS ENTER THE TERM OF FIBONACCI SERIES YOU WANT");
+          scanf("%d",&x);
+          fib(x);
+          break;
+        }
+        default : {
+            printf("INVALID INPUT");
+        }
+    }
+    return 0;
+}  
+
+
+
+void rev(int n)
+{
+int j,sum=0,rem,i=0,arr[100];
+while(n>0)
+{
+rem=n%10;
+arr[i]=rem;
+i++;
+n=n/10;
+}
+for(j=0;j<i;j++)
+{
+    sum = sum*10 + arr[j];
+}
+printf("REVRSE OF ENTERED NUMBER IS :- %d",sum);
+}
+
+
+
+
+int prod(int n,int m)
+{
+while(y>1)
+{
+    y--;
+n=n+prod(n,m);
+return n;
+}
+return n; 
+}
+
+
+void fib(int n)
+{
+int x=0,m=1,t;
+if(n<1)
+{
+printf("invalid input");
+}
+else if(n==1)
+{
+    printf("0");
+}
+else if(n==2)
+{
+    printf("1");
+}
+else{
+int i,arr[100];
+for(i=0;i<100;i++)
+{
+    t=x+m;
+    x=m;
+    m=t;
+    arr[i]=t;
+}
+printf("%d",arr[n-3]);
+}
+}
