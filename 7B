@@ -1,0 +1,36 @@
+#include<stdio.h>
+int check(char *s1,char *s2)
+{
+if(*s1==*s2)
+{
+    return 0;
+}
+else{
+    return 1;
+}
+} 
+int main()
+{
+    int n,i;
+    printf("pls enter length of string :-");
+    scanf("%d",&n);
+    char s1[n],s2[n];
+    printf("pls enter string 1 :-");
+    scanf("%s",s1);
+    printf("pls enter string 2 :-");
+    scanf("%s",s2);
+    for(i=0;i<n;i++)
+    {
+     int a=check(&s1[i],&s2[i]);
+     if(a==1)
+     {
+        printf("not equal");
+        break;
+     }
+    }
+    if(i==n)
+    {
+        printf("equal");
+    }
+    return 0;
+}
