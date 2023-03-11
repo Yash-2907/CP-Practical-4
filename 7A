@@ -1,0 +1,34 @@
+#include<stdio.h>
+struct emp
+{
+    char name[20];
+    int acc;
+    int pan;
+    int bal;
+}s[10];
+int main()
+{
+    int i;
+    for(i=0;i<10;i++)
+    {
+        printf(" ENTER THE DETAILS FOR PERSON %d\n",i+1);
+        printf("pls enter your name :-");
+        scanf("%s",s[i].name);
+        printf("pls enter the account number:-");
+        scanf("%d",&s[i].acc);
+        printf("pls enter the pan card number :-");
+        scanf("%d",&s[i].pan);
+        printf("pls enter you balance :-");
+        scanf("%d",&s[i].bal);
+        printf("\n\n");
+    }
+    printf("\nPEOPLE WITH INCOME LOWER THAN 5000 ARE :-\n");
+    for(i=0;i<10;i++)
+    {
+        if(s[i].bal<5000)
+        {
+            printf("%s\n",s[i].name);
+        }
+    }
+    return 0;
+}
